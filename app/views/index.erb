@@ -1,23 +1,42 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Get Request Example</h1>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <form action="/cool_url" method="get">
+    <br>
+     <input type="text" name="user_input">
+    <input type="submit" value="Submit Something">
+  </form>
+
+  <h1>Post Request Example</h1>
+
+  <form action="/cool_url" method="post">
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Submit Something">
+    <br>
+    <br>
+    <textarea cols="30" rows ="5" name ="food[myname]"> Type here...
+    </textarea>
+    <br>
+    <br>
+    <input type="radio" name="food[videogame]" value="RPG"> RPG<br>
+    <input type="radio" name="food[videogame]" value="Action"> Action<br>
+    <input type="radio" name="food[videogame]" value="FPS"> FPS<br>
+
+    <br>
+    <input type="checkbox" name="sports[]" value="football"> Football<br>
+    <input type="checkbox" name="sports[]" value="basketball"> Basketball<br>
+    <input type="checkbox" name="sports[]" value="baseball"> Baseball<br>
+
+    <br>
+  <select name="Drop[]" multiple=true size="5">
+    <option>chicago cubs</option>
+    <option>houston astros</option>
+    <option>boston red sox</option>
+    <option>boston red sox</option>
+    <option>boston red sox</option>
+    <option>boston red sox</option>
+    <option>boston red sox</option>
+  </select>
+  </form>
 </div>
